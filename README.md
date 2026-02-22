@@ -63,34 +63,15 @@
 
 ## Переменные окружения
 
-### Frontend (`.env`)
-Создайте файл `.env` на основе `.env.example`:
+### Frontend
+- Скопируйте `.env.example` в `.env`.
+- Заполните значения переменных под вашу среду.
 
-```env
-NEXT_PUBLIC_API_URL=http://localhost:54001/api
-UPLOADTHING_TOKEN=
-YOOKASSA_SHOP_ID=1282692
-YOOKASSA_SECRET_KEY=
-YOOKASSA_RETURN_URL=http://localhost:3000/orders
-```
+### Backend
+- Скопируйте `server/.env.example` в `server/.env`.
+- Заполните значения переменных под вашу среду.
 
-### Backend (`server/.env`)
-Создайте `server/.env` на основе `server/.env.example`:
-
-```env
-NODE_ENV=development
-PORT=4000
-FRONTEND_URL=http://localhost:3000
-JWT_SECRET=change-me-in-production
-YOOKASSA_SHOP_ID=
-YOOKASSA_SECRET_KEY=
-YOOKASSA_RETURN_URL=http://localhost:3000/orders
-ADMIN_EMAIL=admin@example.com
-ADMIN_PASSWORD=Admin123!
-DATABASE_URL=postgresql://kursach:kursach@localhost:5433/kursach?schema=public
-```
-
-> Для продакшена обязательно замените `JWT_SECRET`, пароль администратора и ключи оплаты.
+> В репозиторий не должны попадать реальные секреты (`JWT_SECRET`, ключи оплаты, пароли, реальные строки подключения БД).
 
 ---
 
